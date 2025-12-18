@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>HOT Educational Services | 1:1 LIVE Virtual Tutoring</title>
-  <meta name="description" content="Serving Grades K–12 with 1:1 LIVE virtual tutoring. CHOOSE Act Vendor. Accepts ClassWallet payments." />
+  <meta name="description" content="Serving Grades K–12 with 1:1 LIVE virtual tutoring. CHOOSE Act Vendor. Accepts ClassWallet. Math, Reading, English, Social Studies, Bible. ACAP, DIBELS, i-Ready, STAR support + project completion." />
 
   <style>
     :root{
@@ -26,20 +26,22 @@
       background: var(--bg);
       color:var(--text);
     }
+    a{color:inherit}
 
     .wrap{max-width:var(--max); margin:0 auto; padding:24px}
 
     .topnote{
       text-align:center;
-      font-weight:700;
+      font-weight:800;
       color:#374151;
-      margin-bottom:20px;
+      margin: 6px 0 18px;
     }
 
     .hero{
       display:grid;
       grid-template-columns: 1.2fr .8fr;
       gap:20px;
+      align-items:stretch;
     }
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr}
@@ -60,55 +62,61 @@
       padding:10px 14px;
       border-radius:999px;
       border:1px solid var(--line);
-      font-weight:800;
+      font-weight:900;
+      width:fit-content;
     }
-    .dot{
-      width:10px;
-      height:10px;
-      border-radius:50%;
-      background:var(--accent);
-    }
-
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--accent)}
     h1{
       margin:16px 0 10px;
       font-size: clamp(38px, 5vw, 60px);
       line-height:1;
+      letter-spacing:-.6px;
     }
     h1 span{color:var(--accent)}
-
     .subhead{
       font-size:20px;
-      font-weight:700;
-      margin-bottom:16px;
+      font-weight:800;
+      margin:0 0 16px;
+      color:#111827;
     }
 
     .cred{
       border:1px solid var(--line);
       border-radius:14px;
       padding:14px;
-      font-weight:700;
+      font-weight:800;
+      line-height:1.35;
       margin-bottom:14px;
+      background:#fafafa;
     }
     .cred span{color:var(--accent)}
 
+    .pills{margin-top:8px}
     .pill{
       display:inline-block;
       margin:6px 6px 0 0;
       padding:10px 14px;
       border-radius:999px;
       border:1px solid var(--line);
-      font-weight:800;
+      font-weight:900;
+      background:#ffffff;
     }
 
+    .btnrow{display:flex; gap:10px; flex-wrap:wrap; margin-top:14px}
     .btn{
       display:inline-block;
-      margin-top:14px;
       padding:12px 18px;
       border-radius:14px;
       background:var(--accent);
       color:#000;
-      font-weight:900;
+      font-weight:1000;
       text-decoration:none;
+      border:1px solid rgba(0,0,0,.08);
+    }
+    .btn.secondary{
+      background:#ffffff;
+      color:#111827;
+      border:1px solid var(--line);
     }
 
     /* Right card */
@@ -124,19 +132,24 @@
       font-weight:1000;
       font-size:28px;
       text-transform:uppercase;
+      background:
+        radial-gradient(circle at 35% 30%, rgba(0,0,0,.06), transparent 40%),
+        linear-gradient(180deg, rgba(244,180,0,.08), rgba(0,0,0,.02));
     }
 
     .tagline{
       text-align:center;
-      font-weight:900;
-      margin:16px 0;
+      font-weight:1000;
+      margin:16px 0 10px;
+      line-height:1.25;
     }
     .tagline span{color:var(--accent)}
 
     .enroll{
       font-size:26px;
       font-weight:1000;
-      margin-bottom:12px;
+      margin:12px 0 12px;
+      letter-spacing:.2px;
     }
 
     .contact a{
@@ -147,17 +160,74 @@
       border:1px solid var(--line);
       border-radius:14px;
       text-decoration:none;
-      color:inherit;
       margin-bottom:10px;
+      font-weight:900;
+      background:#fafafa;
+    }
+    .contact a:hover{background:#f6f6f6}
+
+    /* Offer sections */
+    .sectionTitle{
+      font-size:22px;
+      font-weight:1000;
+      margin: 0 0 10px;
+      letter-spacing:-.2px;
+    }
+    .grid{
+      margin-top:18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap:16px;
+    }
+    @media (max-width: 1000px){
+      .grid{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width: 650px){
+      .grid{grid-template-columns:1fr}
+    }
+
+    .card{
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:16px;
+      background:#ffffff;
+      box-shadow: 0 4px 14px rgba(0,0,0,.05);
+    }
+    .card h3{
+      margin:0 0 8px;
+      font-size:16px;
+      font-weight:1000;
+      letter-spacing:.1px;
+    }
+    .card p{
+      margin:0;
+      color:var(--muted);
       font-weight:800;
+      line-height:1.45;
+    }
+    .list{
+      margin:10px 0 0 18px;
+      color:#111827;
+      font-weight:900;
+      line-height:1.75;
+    }
+
+    .highlight{
+      margin-top:18px;
+      padding:18px;
+      border-radius:16px;
+      border:1px solid rgba(244,180,0,.35);
+      background: rgba(244,180,0,.10);
+      font-weight:900;
+      line-height:1.5;
     }
 
     footer{
       text-align:center;
-      margin-top:30px;
+      margin-top:26px;
       color:var(--muted);
       font-size:13px;
-      font-weight:700;
+      font-weight:800;
     }
   </style>
 </head>
@@ -166,6 +236,7 @@
   <div class="wrap">
     <div class="topnote">Serving Grades K–12, Personalized Support for Every Learner</div>
 
+    <!-- HERO -->
     <section class="hero">
       <!-- LEFT -->
       <div class="panel">
@@ -179,12 +250,23 @@
           <div>Certified K–6 Educator | K–5 Math Coach</div>
         </div>
 
-        <div>
+        <div class="pills">
           <span class="pill">CHOOSE Act Vendor</span>
           <span class="pill">Accepts ClassWallet</span>
+          <span class="pill">Grades K–12</span>
+          <span class="pill">Flexible Times</span>
         </div>
 
-        <a class="btn" href="mailto:vonda@hoteducation.org">Enroll Today</a>
+        <div class="btnrow">
+          <a class="btn" href="mailto:vonda@hoteducation.org?subject=HOT%20Educational%20Services%20-%20Enrollment%20Request&body=Hello%20HOT%20Educational%20Services%2C%0A%0AI%27m%20interested%20in%20tutoring%20and%20would%20like%20to%20enroll.%20Please%20share%20next%20steps.%0A%0AStudent%20Grade%3A%0ASubject(s)%3A%0APreferred%20Days%2FTimes%3A%0A%0AThank%20you%2C">
+            Enroll by Email
+          </a>
+          <a class="btn secondary" href="tel:19386535821">Call Now</a>
+        </div>
+
+        <div class="highlight">
+          <strong>What families love:</strong> clear goals, consistent progress monitoring, and targeted instruction aligned to what students need next—academics, assessments, and project support.
+        </div>
       </div>
 
       <!-- RIGHT -->
@@ -203,23 +285,91 @@
         <div class="contact">
           <a href="tel:19386535821">📞 938-653-5821</a>
 
-          <!-- EMAIL LINK (YES, THIS IS CORRECT & WORKS) -->
-          <a href="mailto:vonda@hoteducation.org">
+          <!-- Email link -->
+          <a href="mailto:vonda@hoteducation.org?subject=HOT%20Educational%20Services%20-%20Question&body=Hello%20HOT%20Educational%20Services%2C%0A%0AI%20have%20a%20question%20about%20tutoring%20services%3A%0A%0AThank%20you%2C">
             ✉ vonda@hoteducation.org
           </a>
 
-          <a href="#">📅 Sunday – Thursday | Flexible Times</a>
+          <a href="#availability">📅 Sunday – Thursday | Flexible Times</a>
         </div>
+
+        <p id="availability" style="margin:10px 0 0; color:var(--muted); font-weight:800; line-height:1.45;">
+          Session scheduling is flexible to fit family routines, after-school needs, and homework timelines.
+        </p>
       </div>
     </section>
 
-    <footer>
-      © <span id="year"></span> HOT Educational Services • CHOOSE Act Vendor • ClassWallet Accepted
-    </footer>
-  </div>
+    <!-- WHAT WE OFFER -->
+    <section class="panel" style="margin-top:18px;">
+      <h2 class="sectionTitle">What We Offer</h2>
 
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
-</body>
-</html>
+      <div class="grid">
+        <div class="card">
+          <h3>📚 Subjects Supported</h3>
+          <p>Targeted tutoring aligned to grade-level expectations and learning gaps.</p>
+          <ul class="list">
+            <li>Mathematics</li>
+            <li>Reading</li>
+            <li>English / Writing</li>
+            <li>Social Studies</li>
+            <li>Bible</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>📈 Proven Growth Support</h3>
+          <p>We strengthen foundational skills and build confidence with consistent progress checks.</p>
+          <ul class="list">
+            <li>Skill-gap remediation</li>
+            <li>Targeted small goals → bigger wins</li>
+            <li>Practice plans families can follow</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🧪 Assessment Preparation</h3>
+          <p>Support and practice strategies for common school assessments.</p>
+          <ul class="list">
+            <li>ACAP</li>
+            <li>DIBELS</li>
+            <li>i-Ready</li>
+            <li>STAR</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>✅ Homework & Project Completion</h3>
+          <p>Structured sessions to keep students on track and finish strong.</p>
+          <ul class="list">
+            <li>Breaking down directions</li>
+            <li>Planning + deadlines</li>
+            <li>Rubric support</li>
+            <li>Study guides & review</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>🎯 Personalized Learning Plan</h3>
+          <p>Each student gets a simple plan that matches their current level and goals.</p>
+          <ul class="list">
+            <li>Goal setting</li>
+            <li>Weekly focus skills</li>
+            <li>Progress updates</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>💳 Payment Options</h3>
+          <p>Convenient options for families using scholarship funding or direct pay.</p>
+          <ul class="list">
+            <li>CHOOSE Act Vendor</li>
+            <li>ClassWallet accepted</li>
+            <li>Affordable learning packages</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="highlight" style="margin-top:16px;">
+        <strong>Ready to g
+
+
